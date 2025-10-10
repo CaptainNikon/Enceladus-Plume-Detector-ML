@@ -1,0 +1,297 @@
+PDS_VERSION_ID                  = PDS3                                        
+                                                                              
+RECORD_TYPE                     = FIXED_LENGTH                                
+RECORD_BYTES                    = 70                                          
+FILE_RECORDS                    = 111                                         
+                                                                              
+^TABLE                          = "CDASTAT.TAB"                               
+                                                                              
+DATA_SET_NAME                   = "CASSINI CDA DATA V1.0"                     
+DATA_SET_ID                     = "CO-D-CDA-3/4/5-DUST-V1.0"                  
+PRODUCT_ID                      = "CDA_STAT"                                  
+PRODUCT_NAME                    = "CASSINI CDA STATUS HISTORY FILE"           
+SPACECRAFT_NAME                 = "CASSINI ORBITER"                           
+INSTRUMENT_NAME                 = "COSMIC DUST ANALYSER"                      
+TARGET_NAME                     = "DUST"                                      
+START_TIME                      = "2005-182T00:00:01"                         
+STOP_TIME                       = "2005-202T23:59:59"                         
+PRODUCT_CREATION_TIME           = "2006-178T18:21:14"                         
+RECORD_FORMAT                   =                                             
+"(A17,1X,A5,5(1X,I2),3(1X,I3),7(1X,I1),1X,I3)"                                
+                                                                              
+OBJECT                          = TABLE                                       
+ INTERCHANGE_FORMAT             = ASCII                                       
+ ROWS                           = 111                                         
+ COLUMNS                        = 18                                          
+ ROW_BYTES                      = 70                                          
+ DESCRIPTION                    =                                             
+"CDA configuration state as function of time. Records are triggered by        
+any change in the CDA status, taking into account the sensitivity             
+thresholds of the different CDA subsystems, the compression level of the      
+data, the articulation angle of the turntable, and if the instrument was      
+on or off."                                                                   
+                                                                              
+ OBJECT                         = COLUMN                                      
+  COLUMN_NUMBER                 = 1                                           
+  NAME                          = "EVENT_TIME"                                
+  DESCRIPTION                   =                                             
+"The UTC time given in year, day of year, hours, minutes, and seconds in      
+the general form: yyyy-dddThh:mm:ss."                                         
+  DATA_TYPE                     = "TIME"                                      
+  START_BYTE                    = 1                                           
+  BYTES                         = 17                                          
+  MISSING_CONSTANT              = "9999-999T99:99:99"                         
+  FORMAT                        = "A17"                                       
+ END_OBJECT                     = COLUMN                                      
+                                                                              
+ OBJECT                         = COLUMN                                      
+  COLUMN_NUMBER                 = 2                                           
+  NAME                          = "EVENT_DEFINITION"                          
+  DESCRIPTION                   =                                             
+"A five digit integer which indicates which detectors can trigger a           
+particle detection, coded as follows 1   | QT, 2   | QC, 3   | QA, 4   |      
+QI, 5   | QMA, where the digit value is 0 if the detector is switched         
+off, and 1 if the detector is switched on."                                   
+  DATA_TYPE                     = "CHARACTER"                                 
+  START_BYTE                    = 19                                          
+  BYTES                         = 5                                           
+  MISSING_CONSTANT              = 99999                                       
+  FORMAT                        = "A5"                                        
+ END_OBJECT                     = COLUMN                                      
+                                                                              
+ OBJECT                         = COLUMN                                      
+  COLUMN_NUMBER                 = 3                                           
+  NAME                          = "QC_THRESHOLD_SETTING"                      
+  DESCRIPTION                   =                                             
+"Code corresponding to the threshold setting at the time of impact for        
+the amplifier connected to the chemical analyser target. Values are           
+between 0 and 15. Conversion to Coulombs is dependent upon rise time and      
+is found in CDASETTINGS.TAB."                                                 
+  DATA_TYPE                     = "ASCII_INTEGER"                             
+  START_BYTE                    = 25                                          
+  BYTES                         = 2                                           
+  MISSING_CONSTANT              = 99                                          
+  FORMAT                        = "I2"                                        
+ END_OBJECT                     = COLUMN                                      
+                                                                              
+ OBJECT                         = COLUMN                                      
+  COLUMN_NUMBER                 = 4                                           
+  NAME                          = "QA_THRESHOLD_SETTING"                      
+  DESCRIPTION                   =                                             
+"Code corresponding to the threshold setting at the time of impact for        
+the amplifier connected to the chemical analyser grid. Values are             
+between 0 and 15. Conversion to Coulombs is dependent upon rise time and      
+is found in CDASETTINGS.TAB."                                                 
+  DATA_TYPE                     = "ASCII_INTEGER"                             
+  START_BYTE                    = 28                                          
+  BYTES                         = 2                                           
+  MISSING_CONSTANT              = 99                                          
+  FORMAT                        = "I2"                                        
+ END_OBJECT                     = COLUMN                                      
+                                                                              
+ OBJECT                         = COLUMN                                      
+  COLUMN_NUMBER                 = 5                                           
+  NAME                          = "QT_THRESHOLD_SETTING"                      
+  DESCRIPTION                   =                                             
+"Code corresponding to the threshold setting at the time of impact for        
+the amplifier connected to the impact ionisation grid. Values are             
+between 0 and 15. Conversion to Coulombs is dependent upon rise time and      
+is found in CDASETTINGS.TAB."                                                 
+  DATA_TYPE                     = "ASCII_INTEGER"                             
+  START_BYTE                    = 31                                          
+  BYTES                         = 2                                           
+  MISSING_CONSTANT              = 99                                          
+  FORMAT                        = "I2"                                        
+ END_OBJECT                     = COLUMN                                      
+                                                                              
+ OBJECT                         = COLUMN                                      
+  COLUMN_NUMBER                 = 6                                           
+  NAME                          = "QI_THRESHOLD_SETTING"                      
+  DESCRIPTION                   =                                             
+"Code corresponding to the threshold setting at the time of impact for        
+the amplifier connected to the ion grid. Values are between 0 and 15.         
+Conversion to Coulombs is dependent upon rise time and is found in            
+CDASETTINGS.TAB."                                                             
+  DATA_TYPE                     = "ASCII_INTEGER"                             
+  START_BYTE                    = 34                                          
+  BYTES                         = 2                                           
+  MISSING_CONSTANT              = 99                                          
+  FORMAT                        = "I2"                                        
+ END_OBJECT                     = COLUMN                                      
+                                                                              
+ OBJECT                         = COLUMN                                      
+  COLUMN_NUMBER                 = 7                                           
+  NAME                          = "QMA_THRESHOLD_SETTING"                     
+  DESCRIPTION                   =                                             
+"Code corresponding to the threshold setting at the time of impact for        
+the amplifier connected to the multiplier anode. Values are between 0         
+and 15. Conversion to Coulombs is dependent upon rise time and is found       
+in CDASETTINGS.TAB."                                                          
+  DATA_TYPE                     = "ASCII_INTEGER"                             
+  START_BYTE                    = 37                                          
+  BYTES                         = 2                                           
+  MISSING_CONSTANT              = 99                                          
+  FORMAT                        = "I2"                                        
+ END_OBJECT                     = COLUMN                                      
+                                                                              
+ OBJECT                         = COLUMN                                      
+  COLUMN_NUMBER                 = 8                                           
+  NAME                          = "MULTIPLIER_VOLTAGE_LEVEL"                  
+  DESCRIPTION                   =                                             
+"The multiplier high voltage level setting, in steps between 0 and 255.       
+Corresponding voltages are found in CDASETTINGS.TAB."                         
+  DATA_TYPE                     = "ASCII_INTEGER"                             
+  START_BYTE                    = 40                                          
+  BYTES                         = 3                                           
+  MISSING_CONSTANT              = 999                                         
+  FORMAT                        = "I3"                                        
+ END_OBJECT                     = COLUMN                                      
+                                                                              
+ OBJECT                         = COLUMN                                      
+  COLUMN_NUMBER                 = 9                                           
+  NAME                          = "ION_GRID_VOLTAGE_LEVEL"                    
+  DESCRIPTION                   =                                             
+"The ion grid high voltage level setting, in steps between 0 and 255.         
+Corresponding voltages are found in CDASETTINGS.TAB."                         
+  DATA_TYPE                     = "ASCII_INTEGER"                             
+  START_BYTE                    = 44                                          
+  BYTES                         = 3                                           
+  MISSING_CONSTANT              = 999                                         
+  FORMAT                        = "I3"                                        
+ END_OBJECT                     = COLUMN                                      
+                                                                              
+ OBJECT                         = COLUMN                                      
+  COLUMN_NUMBER                 = 10                                          
+  NAME                          = "CHEMICAL_ANALYSER_VOLTAGE_LEVEL"           
+  DESCRIPTION                   =                                             
+"The chemical analyser high voltage level setting, in steps between 0 and     
+255. Corresponding voltages are found in CDASETTINGS.TAB."                    
+  DATA_TYPE                     = "ASCII_INTEGER"                             
+  START_BYTE                    = 48                                          
+  BYTES                         = 3                                           
+  MISSING_CONSTANT              = 999                                         
+  FORMAT                        = "I3"                                        
+ END_OBJECT                     = COLUMN                                      
+                                                                              
+ OBJECT                         = COLUMN                                      
+  COLUMN_NUMBER                 = 11                                          
+  NAME                          = "CDA_LISTEN_FLAG"                           
+  DESCRIPTION                   =                                             
+"A flag indicating that CDA was in a measurement mode (1) or not (0)."        
+  DATA_TYPE                     = "ASCII_INTEGER"                             
+  START_BYTE                    = 52                                          
+  BYTES                         = 1                                           
+  MISSING_CONSTANT              = 9                                           
+  FORMAT                        = "I1"                                        
+ END_OBJECT                     = COLUMN                                      
+                                                                              
+ OBJECT                         = COLUMN                                      
+  COLUMN_NUMBER                 = 12                                          
+  NAME                          = "CDA_HARD_STATUS"                           
+  DESCRIPTION                   =                                             
+"Code indicating whether CDA was on (1) or off (0)."                          
+  DATA_TYPE                     = "ASCII_INTEGER"                             
+  START_BYTE                    = 54                                          
+  BYTES                         = 1                                           
+  MISSING_CONSTANT              = 9                                           
+  FORMAT                        = "I1"                                        
+ END_OBJECT                     = COLUMN                                      
+                                                                              
+ OBJECT                         = COLUMN                                      
+  COLUMN_NUMBER                 = 13                                          
+  NAME                          = "QI_SHRINKING"                              
+  DESCRIPTION                   =                                             
+"A description of the degree of lossy data compression applied to the         
+transmitted time-resolved ion grid signal (QI), where there is no             
+compression (1) or compression by factors of 2 (2) or 4 (4). The              
+compression degree strongly affects the accuracy of the data reduction        
+on Earth."                                                                    
+  DATA_TYPE                     = "ASCII_INTEGER"                             
+  START_BYTE                    = 56                                          
+  BYTES                         = 1                                           
+  MISSING_CONSTANT              = 9                                           
+  FORMAT                        = "I1"                                        
+ END_OBJECT                     = COLUMN                                      
+                                                                              
+ OBJECT                         = COLUMN                                      
+  COLUMN_NUMBER                 = 14                                          
+  NAME                          = "QC_SHRINKING"                              
+  DESCRIPTION                   =                                             
+"A description of the degree of lossy data compression applied to the         
+transmitted the time-resolved electron charge signal at the chemical          
+target (QC), where there is no compression (1) or compression by factors      
+of 2 (2) or 4 (4). The compression degree strongly affects the accuracy       
+of the data reduction on Earth."                                              
+  DATA_TYPE                     = "ASCII_INTEGER"                             
+  START_BYTE                    = 58                                          
+  BYTES                         = 1                                           
+  MISSING_CONSTANT              = 9                                           
+  FORMAT                        = "I1"                                        
+ END_OBJECT                     = COLUMN                                      
+                                                                              
+ OBJECT                         = COLUMN                                      
+  COLUMN_NUMBER                 = 15                                          
+  NAME                          = "QT_SHRINKING"                              
+  DESCRIPTION                   =                                             
+"A description of the degree of lossy data compression applied to the         
+transmitted the time-resolved electron charge signal at the impact            
+target (QT), where there is no compression (1) or compression by factors      
+of 2 (2) or 4 (4). The compression degree strongly affects the accuracy       
+of the data reduction on Earth."                                              
+  DATA_TYPE                     = "ASCII_INTEGER"                             
+  START_BYTE                    = 60                                          
+  BYTES                         = 1                                           
+  MISSING_CONSTANT              = 9                                           
+  FORMAT                        = "I1"                                        
+ END_OBJECT                     = COLUMN                                      
+                                                                              
+ OBJECT                         = COLUMN                                      
+  COLUMN_NUMBER                 = 16                                          
+  NAME                          = "QP_SHRINKING"                              
+  DESCRIPTION                   =                                             
+"A description of the degree of lossy data compression applied to the         
+transmitted the time-resolved ion grid signal (QP), where there is no         
+compression (1) or compression by factors of 2 (2) or 4 (4). The              
+compression degree strongly affects the accuracy of the data reduction        
+on Earth."                                                                    
+  DATA_TYPE                     = "ASCII_INTEGER"                             
+  START_BYTE                    = 62                                          
+  BYTES                         = 1                                           
+  MISSING_CONSTANT              = 9                                           
+  FORMAT                        = "I1"                                        
+ END_OBJECT                     = COLUMN                                      
+                                                                              
+ OBJECT                         = COLUMN                                      
+  COLUMN_NUMBER                 = 17                                          
+  NAME                          = "MP_SHRINKING"                              
+  DESCRIPTION                   =                                             
+"A description of the degree of lossy data compression applied to the         
+transmitted the time-resolved ion grid signal (MP), where there is no         
+compression (1) or compression by factors of 2 (2) or 4 (4). The              
+compression degree strongly affects the accuracy of the data reduction        
+on Earth."                                                                    
+  DATA_TYPE                     = "ASCII_INTEGER"                             
+  START_BYTE                    = 64                                          
+  BYTES                         = 1                                           
+  MISSING_CONSTANT              = 9                                           
+  FORMAT                        = "I1"                                        
+ END_OBJECT                     = COLUMN                                      
+                                                                              
+ OBJECT                         = COLUMN                                      
+  COLUMN_NUMBER                 = 18                                          
+  NAME                          = "CDA_ARTICULATION_POSITION"                 
+  DESCRIPTION                   =                                             
+"CDA articulation position (a) on the turntable given in degrees. The CDA     
+instrument boresight within the S/C coordinate systems depends upon the       
+position (a) as: x = 1/8 ( -1 - SQRT(3) + (-1 + SQRT(3)) COS(a) - 2           
+SQRT(6) SIN(a) ) y = 1/8 (  3 + SQRT(3) + (-3 + SQRT(3)) COS(a) - 2           
+SQRT(2) SIN(a) ) z = 1/4 ( -1 + SQRT(3) + ( 1 + SQRT(3)) COS(a) )"            
+  DATA_TYPE                     = "ASCII_INTEGER"                             
+  START_BYTE                    = 66                                          
+  BYTES                         = 3                                           
+  MISSING_CONSTANT              = 999                                         
+  FORMAT                        = "I3"                                        
+ END_OBJECT                     = COLUMN                                      
+                                                                              
+END_OBJECT                      = TABLE                                       
+END                                                                           

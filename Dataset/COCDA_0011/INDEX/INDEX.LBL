@@ -1,0 +1,58 @@
+PDS_VERSION_ID                  = PDS3                                        
+                                                                              
+RECORD_TYPE                     = FIXED_LENGTH                                
+FILE_RECORDS                    = 140470                                      
+RECORD_BYTES                    = 105                                         
+^INDEX_TABLE                    = "INDEX.TAB"                                 
+VOLUME_ID                       = "COCDA_0011"                                
+PRODUCT_CREATION_TIME           = 2006-03-31T05:43:35                         
+                                                                              
+OBJECT                = INDEX_TABLE                                           
+  INDEX_TYPE          = "SINGLE"                                              
+  INTERCHANGE_FORMAT  = "ASCII"                                               
+  COLUMNS             = 4                                                     
+  ROWS                = 140470                                                
+  ROW_BYTES           = 105                                                   
+                                                                              
+  OBJECT              = COLUMN                                                
+    COLUMN_NUMBER     = 1                                                     
+    NAME              = "FILE_SPECIFICATION_NAME"                             
+    START_BYTE        = 1                                                     
+    BYTES             = 60                                                    
+    DATA_TYPE         = "CHARACTER"                                           
+    FORMAT            = "A60"                                                 
+    DESCRIPTION       = "File path and name"                                  
+  END_OBJECT          = COLUMN                                                
+                                                                              
+  OBJECT              = COLUMN                                                
+    COLUMN_NUMBER     = 2                                                     
+    NAME              = "RECORD BYTES"                                        
+    START_BYTE        = 62                                                    
+    BYTES             = 3                                                     
+    DATA_TYPE         = "ASCII_INTEGER"                                       
+    FORMAT            = "I3"                                                  
+    DESCRIPTION       = "Byte length of record "                              
+  END_OBJECT          = COLUMN                                                
+                                                                              
+  OBJECT              = COLUMN                                                
+    COLUMN_NUMBER     = 3                                                     
+    NAME              = "FILE_RECORDS"                                        
+    START_BYTE        = 66                                                    
+    BYTES             = 5                                                     
+    DATA_TYPE         = "ASCII_INTEGER"                                       
+    FORMAT            = "I5"                                                  
+    DESCRIPTION       = "Records number in file"                              
+  END_OBJECT          = COLUMN                                                
+                                                                              
+  OBJECT              = COLUMN                                                
+    COLUMN_NUMBER     = 4                                                     
+    NAME              = "DATA_SET_ID"                                         
+    START_BYTE        = 72                                                    
+    BYTES             = 24                                                    
+    DATA_TYPE         = "CHARACTER"                                           
+    FORMAT            = "A24"                                                 
+    DESCRIPTION       = "ID of data set on current volume"                    
+  END_OBJECT          = COLUMN                                                
+                                                                              
+END_OBJECT = INDEX_TABLE                                                      
+END                                                                           

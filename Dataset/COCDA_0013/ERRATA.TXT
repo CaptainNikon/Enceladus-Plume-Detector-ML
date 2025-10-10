@@ -1,0 +1,17 @@
+PDS_VERSION_ID                  = PDS3                                        
+                                                                              
+RECORD_TYPE                     = FIXED_LENGTH                                
+RECORD_BYTE                     = 80                                          
+OBJECT                          = TEXT                                        
+PUBLICATION_DATE                = 2006-06-28                                  
+INTERCHANGE_FORMAT              = ASCII                                       
+NOTE                            ="ERRATA.TXT for CDA"                         
+END_OBJECT = TEXT                                                             
+END                                                                           
+                                                                              
+This document contains comments and errors concerning the Cassini CDA         
+instrument data records published on this collection of DVDs. This            
+errata file is modified as problems/issues are encountered during the         
+active mission lifetime, and result in changes or corrections, or notes       
+worthy to the end user.                                                       
+                                                                              

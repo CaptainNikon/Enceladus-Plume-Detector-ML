@@ -1,0 +1,48 @@
+PDS_VERSION_ID                     = PDS3                                     
+RECORD_TYPE                        = UNDEFINED                                
+                                                                              
+^ASCII_DOCUMENT                    = "CDA_SIS_1_0.TXT"                        
+^WORD_DOCUMENT                     = "CDA_SIS_1_0.DOC"                        
+^PDF_DOCUMENT                      = "CDA_SIS_1_0.PDF"                        
+                                                                              
+OBJECT                             = ASCII_DOCUMENT                           
+   DOCUMENT_NAME                   = "CDA SIS VERSION 1.0"                    
+   PUBLICATION_DATE                = 2005-06-25                               
+   DOCUMENT_TOPIC_TYPE             = "SOFTWARE INTERFACE SPECIFICATION"       
+   INTERCHANGE_FORMAT              = "ASCII"                                  
+   DOCUMENT_FORMAT                 = "ASCII"                                  
+   ABSTRACT_TEXT                   = "                                        
+     The Cassini CDA Software Interface Specification Version 1.0"            
+   DESCRIPTION                     = "                                        
+     This file provides the required ASCII version of the Cassini             
+     CDA Software Interface Specification Version 1.0.                        
+END_OBJECT                         = ASCII_DOCUMENT                           
+                                                                              
+OBJECT                             = WORD_DOCUMENT                            
+   DOCUMENT_NAME                   = "CDA SIS VERSION 1.0"                    
+   PUBLICATION_DATE                = 2005-06-25                               
+   DOCUMENT_TOPIC_TYPE             = "SOFTWARE INTERFACE SPECIFICATION"       
+   INTERCHANGE_FORMAT              = "BINARY"                                 
+   DOCUMENT_FORMAT                 = "MICROSOFT WORD"                         
+   ABSTRACT_TEXT                   = "                                        
+     The Cassini CDA Software Interface Specification Version 1.0"            
+   DESCRIPTION                     = "                                        
+     This file provides a Microsoft Word version of the Cassini CDA           
+     Software Interface Specification Version 1.0 for the convenience         
+     of users."                                                               
+END_OBJECT                         = WORD_DOCUMENT                            
+                                                                              
+OBJECT                             = PDF_DOCUMENT                             
+   DOCUMENT_NAME                   = "CDA SIS VERSION 1.0"                    
+   PUBLICATION_DATE                = 2005-06-25                               
+   DOCUMENT_TOPIC_TYPE             = "SOFTWARE INTERFACE SPECIFICATION"       
+   INTERCHANGE_FORMAT              = "BINARY"                                 
+   DOCUMENT_FORMAT                 = "ADOBE PDF"                              
+   ABSTRACT_TEXT                   = "                                        
+     The Cassini CDA Software Interface Specification Version 1.0"            
+   DESCRIPTION                     = "                                        
+     This file provides an Acrobat PDF version of the Cassini CDA Software    
+     Interface Specification Version 1.0 for the convenience of users."       
+END_OBJECT                         = PDF_DOCUMENT                             
+                                                                              
+END                                                                           

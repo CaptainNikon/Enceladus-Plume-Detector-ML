@@ -1,0 +1,42 @@
+PDS_VERSION_ID                  = PDS3                                        
+RECORD_TYPE                     = FIXED_LENGTH                                
+RECORD_BYTES                    = 80                                          
+LABEL_REVISION_NOTE = "J. Stone 2010-08-25:
+           Fixed errors prior to delivery to NSSDC."                                                  
+                                                                              
+OBJECT                          = VOLUME                                      
+  VOLUME_SERIES_NAME = "MISSION TO SATURN"                                    
+  VOLUME_SET_NAME    = "CASSINI COSMIC DUST ANALYZER DATA"                    
+  VOLUME_SET_ID      = "USA_NASA_SBN_COCDA_0001"                              
+  VOLUMES            = 1                                                      
+  MEDIUM_TYPE        = "DVD-R"                                                
+  VOLUME_FORMAT      = "UDF_ISO-9660_BRIDGE"                                   
+  VOLUME_NAME        = "CASSINI COSMIC DUST ANALYZER DATA VOLUME 1"           
+  VOLUME_ID          = "COCDA_0012"                                           
+  VOLUME_VERSION_ID  = "VERSION 1"                                            
+  PUBLICATION_DATE   = 2006-178                                               
+  DATA_SET_ID = "CO-D-CDA-3/4/5-DUST-V1.0"                                    
+  DESCRIPTION                   = "This volume contains the first             
+           submission of data from the Cosmic Dust Analyzer of the            
+           Cassini mission."                                                  
+                                                                              
+  OBJECT              = DATA_PRODUCER                                         
+    FULL_NAME         = "NICOLAS ALTOBELLI"                                   
+    FACILITY_NAME     = "NASA/JPL"                                            
+    INSTITUTION_NAME  = "NASA/JPL"                                            
+    ADDRESS_TEXT      = "4800 Oak Grove Drive Pasadena 91109                  
+                        USA"                                                  
+    TELEPHONE_NUMBER  = "1 818 393 0837"                                      
+    ELECTRONIC_MAIL_ID= "Nicolas.Altobelli@jpl.nasa.gov"                      
+  END_OBJECT         = DATA_PRODUCER                                          
+                                                                              
+  OBJECT     = CATALOG                                                        
+    ^MISSION_CATALOG         = "MISSION.CAT"                                           
+    ^INSTRUMENT_HOST_CATALOG = "INSTHOST.CAT"                                          
+    ^INSTRUMENT_CATALOG      = "CDAINST.CAT"                                           
+    ^DATA_SET_CATALOG        = "CDADS.CAT"                                             
+    ^REFERENCE_CATALOG       = {"CDAREFS.CAT", "PROJREF.CAT"}                              
+    ^TARGET_CATALOG          = "DUST.CAT"                                              
+  END_OBJECT = CATALOG                                                        
+END_OBJECT                       = VOLUME                                     
+END                                                                           

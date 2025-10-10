@@ -1,0 +1,286 @@
+PDS_VERSION_ID                  = PDS3                                        
+                                                                              
+RECORD_TYPE                     = FIXED_LENGTH                                
+RECORD_BYTES                    = 200                                         
+FILE_RECORDS                    = 20262                                       
+                                                                              
+^TABLE                          = "CDACOUNTER.TAB"                            
+                                                                              
+DATA_SET_NAME                   = "CASSINI CDA DATA V1.0"                     
+DATA_SET_ID                     = "CO-D-CDA-3/4/5-DUST-V1.0"                  
+PRODUCT_ID                      = "CDA-COUNTER"                               
+PRODUCT_NAME                    = "CDA COUNTER STATE TABLE"                   
+SPACECRAFT_NAME                 = "CASSINI ORBITER"                           
+INSTRUMENT_NAME                 = "COSMIC DUST ANALYSER"                      
+TARGET_NAME                     = "DUST"                                      
+START_TIME                      = "2005-091T00:00:00"                         
+STOP_TIME                       = "2005-181T23:59:59"                         
+PRODUCT_CREATION_TIME           = "2006-03-29T03:41:45"                       
+RECORD_FORMAT                   =                                             
+"(A17,20(1X,I8))"                                                             
+                                                                              
+OBJECT                          = TABLE                                       
+ INTERCHANGE_FORMAT             = ASCII                                       
+ ROWS                           = 20262                                       
+ COLUMNS                        = 21                                          
+ ROW_BYTES                      = 200                                         
+ DESCRIPTION                    =                                             
+"This table represents changes to the counter values, issued by any event     
+which triggered the instrument. For a more detailed description, please       
+refer to SRAMAETAL2004B."                                                     
+                                                                              
+ OBJECT                         = COLUMN                                      
+  COLUMN_NUMBER                 = 1                                           
+  NAME                          = "TIME"                                      
+  DESCRIPTION                   =                                             
+"Time when the counter state snapshot was taken, given in UTC (years, day     
+of year, hours, minutes, and seconds) in the general                          
+form:yyyy-dddThh:mm:ss. Uncertainty is about 1 second."                       
+  DATA_TYPE                     = "CHARACTER"                                 
+  START_BYTE                    = 1                                           
+  BYTES                         = 17                                          
+  FORMAT                        = "A17"                                       
+ END_OBJECT                     = COLUMN                                      
+                                                                              
+ OBJECT                         = COLUMN                                      
+  COLUMN_NUMBER                 = 2                                           
+  NAME                          = "COUNTER_0"                                 
+  DESCRIPTION                   =                                             
+"State of counter 0 at the time of the snapshot."                             
+  DATA_TYPE                     = "ASCII_INTEGER"                             
+  START_BYTE                    = 19                                          
+  BYTES                         = 8                                           
+  MISSING_CONSTANT              = -99                                         
+  FORMAT                        = "I8"                                        
+ END_OBJECT                     = COLUMN                                      
+                                                                              
+ OBJECT                         = COLUMN                                      
+  COLUMN_NUMBER                 = 3                                           
+  NAME                          = "COUNTER_1"                                 
+  DESCRIPTION                   =                                             
+"State of counter 1 at the time of the snapshot."                             
+  DATA_TYPE                     = "ASCII_INTEGER"                             
+  START_BYTE                    = 28                                          
+  BYTES                         = 8                                           
+  MISSING_CONSTANT              = -99                                         
+  FORMAT                        = "I8"                                        
+ END_OBJECT                     = COLUMN                                      
+                                                                              
+ OBJECT                         = COLUMN                                      
+  COLUMN_NUMBER                 = 4                                           
+  NAME                          = "COUNTER_2"                                 
+  DESCRIPTION                   =                                             
+"State of counter 2 at the time of the snapshot."                             
+  DATA_TYPE                     = "ASCII_INTEGER"                             
+  START_BYTE                    = 37                                          
+  BYTES                         = 8                                           
+  MISSING_CONSTANT              = -99                                         
+  FORMAT                        = "I8"                                        
+ END_OBJECT                     = COLUMN                                      
+                                                                              
+ OBJECT                         = COLUMN                                      
+  COLUMN_NUMBER                 = 5                                           
+  NAME                          = "COUNTER_3"                                 
+  DESCRIPTION                   =                                             
+"State of counter 3 at the time of the snapshot."                             
+  DATA_TYPE                     = "ASCII_INTEGER"                             
+  START_BYTE                    = 46                                          
+  BYTES                         = 8                                           
+  MISSING_CONSTANT              = -99                                         
+  FORMAT                        = "I8"                                        
+ END_OBJECT                     = COLUMN                                      
+                                                                              
+ OBJECT                         = COLUMN                                      
+  COLUMN_NUMBER                 = 6                                           
+  NAME                          = "COUNTER_4"                                 
+  DESCRIPTION                   =                                             
+"State of counter 4 at the time of the snapshot."                             
+  DATA_TYPE                     = "ASCII_INTEGER"                             
+  START_BYTE                    = 55                                          
+  BYTES                         = 8                                           
+  MISSING_CONSTANT              = -99                                         
+  FORMAT                        = "I8"                                        
+ END_OBJECT                     = COLUMN                                      
+                                                                              
+ OBJECT                         = COLUMN                                      
+  COLUMN_NUMBER                 = 7                                           
+  NAME                          = "COUNTER_5"                                 
+  DESCRIPTION                   =                                             
+"State of counter 5 at the time  of the snapshot."                            
+  DATA_TYPE                     = "ASCII_INTEGER"                             
+  START_BYTE                    = 64                                          
+  BYTES                         = 8                                           
+  MISSING_CONSTANT              = -99                                         
+  FORMAT                        = "I8"                                        
+ END_OBJECT                     = COLUMN                                      
+                                                                              
+ OBJECT                         = COLUMN                                      
+  COLUMN_NUMBER                 = 8                                           
+  NAME                          = "COUNTER_6"                                 
+  DESCRIPTION                   =                                             
+"State of counter 6 at the time of the snapshot."                             
+  DATA_TYPE                     = "ASCII_INTEGER"                             
+  START_BYTE                    = 73                                          
+  BYTES                         = 8                                           
+  MISSING_CONSTANT              = -99                                         
+  FORMAT                        = "I8"                                        
+ END_OBJECT                     = COLUMN                                      
+                                                                              
+ OBJECT                         = COLUMN                                      
+  COLUMN_NUMBER                 = 9                                           
+  NAME                          = "COUNTER_7"                                 
+  DESCRIPTION                   =                                             
+"State of counter 7 at the time  of the snapshot."                            
+  DATA_TYPE                     = "ASCII_INTEGER"                             
+  START_BYTE                    = 82                                          
+  BYTES                         = 8                                           
+  MISSING_CONSTANT              = -99                                         
+  FORMAT                        = "I8"                                        
+ END_OBJECT                     = COLUMN                                      
+                                                                              
+ OBJECT                         = COLUMN                                      
+  COLUMN_NUMBER                 = 10                                          
+  NAME                          = "COUNTER_8"                                 
+  DESCRIPTION                   =                                             
+"State of counter 8 at the time  of the snapshot."                            
+  DATA_TYPE                     = "ASCII_INTEGER"                             
+  START_BYTE                    = 91                                          
+  BYTES                         = 8                                           
+  MISSING_CONSTANT              = -99                                         
+  FORMAT                        = "I8"                                        
+ END_OBJECT                     = COLUMN                                      
+                                                                              
+ OBJECT                         = COLUMN                                      
+  COLUMN_NUMBER                 = 11                                          
+  NAME                          = "COUNTER_9"                                 
+  DESCRIPTION                   =                                             
+"State of counter 9 at the time of the snapshot."                             
+  DATA_TYPE                     = "ASCII_INTEGER"                             
+  START_BYTE                    = 100                                         
+  BYTES                         = 8                                           
+  MISSING_CONSTANT              = -99                                         
+  FORMAT                        = "I8"                                        
+ END_OBJECT                     = COLUMN                                      
+                                                                              
+ OBJECT                         = COLUMN                                      
+  COLUMN_NUMBER                 = 12                                          
+  NAME                          = "COUNTER_10"                                
+  DESCRIPTION                   =                                             
+"State of counter 10 at the time of the snapshot."                            
+  DATA_TYPE                     = "ASCII_INTEGER"                             
+  START_BYTE                    = 109                                         
+  BYTES                         = 8                                           
+  MISSING_CONSTANT              = -99                                         
+  FORMAT                        = "I8"                                        
+ END_OBJECT                     = COLUMN                                      
+                                                                              
+ OBJECT                         = COLUMN                                      
+  COLUMN_NUMBER                 = 13                                          
+  NAME                          = "COUNTER_11"                                
+  DESCRIPTION                   =                                             
+"State of counter 11 at the time of the snapshot."                            
+  DATA_TYPE                     = "ASCII_INTEGER"                             
+  START_BYTE                    = 118                                         
+  BYTES                         = 8                                           
+  MISSING_CONSTANT              = -99                                         
+  FORMAT                        = "I8"                                        
+ END_OBJECT                     = COLUMN                                      
+                                                                              
+ OBJECT                         = COLUMN                                      
+  COLUMN_NUMBER                 = 14                                          
+  NAME                          = "COUNTER_12"                                
+  DESCRIPTION                   =                                             
+"State of counter 12 at the time of the snapshot."                            
+  DATA_TYPE                     = "ASCII_INTEGER"                             
+  START_BYTE                    = 127                                         
+  BYTES                         = 8                                           
+  MISSING_CONSTANT              = -99                                         
+  FORMAT                        = "I8"                                        
+ END_OBJECT                     = COLUMN                                      
+                                                                              
+ OBJECT                         = COLUMN                                      
+  COLUMN_NUMBER                 = 15                                          
+  NAME                          = "COUNTER_13"                                
+  DESCRIPTION                   =                                             
+"State of counter 13 at the time of the snapshot."                            
+  DATA_TYPE                     = "ASCII_INTEGER"                             
+  START_BYTE                    = 136                                         
+  BYTES                         = 8                                           
+  MISSING_CONSTANT              = -99                                         
+  FORMAT                        = "I8"                                        
+ END_OBJECT                     = COLUMN                                      
+                                                                              
+ OBJECT                         = COLUMN                                      
+  COLUMN_NUMBER                 = 16                                          
+  NAME                          = "COUNTER_14"                                
+  DESCRIPTION                   =                                             
+"State of counter 14 at the time of the snapshot."                            
+  DATA_TYPE                     = "ASCII_INTEGER"                             
+  START_BYTE                    = 145                                         
+  BYTES                         = 8                                           
+  MISSING_CONSTANT              = -99                                         
+  FORMAT                        = "I8"                                        
+ END_OBJECT                     = COLUMN                                      
+                                                                              
+ OBJECT                         = COLUMN                                      
+  COLUMN_NUMBER                 = 17                                          
+  NAME                          = "COUNTER_15"                                
+  DESCRIPTION                   =                                             
+"State of counter 15 at the time of the snapshot."                            
+  DATA_TYPE                     = "ASCII_INTEGER"                             
+  START_BYTE                    = 154                                         
+  BYTES                         = 8                                           
+  MISSING_CONSTANT              = -99                                         
+  FORMAT                        = "I8"                                        
+ END_OBJECT                     = COLUMN                                      
+                                                                              
+ OBJECT                         = COLUMN                                      
+  COLUMN_NUMBER                 = 18                                          
+  NAME                          = "COUNTER_16"                                
+  DESCRIPTION                   =                                             
+"State of counter 16 at the time of the snapshot."                            
+  DATA_TYPE                     = "ASCII_INTEGER"                             
+  START_BYTE                    = 163                                         
+  BYTES                         = 8                                           
+  MISSING_CONSTANT              = -99                                         
+  FORMAT                        = "I8"                                        
+ END_OBJECT                     = COLUMN                                      
+                                                                              
+ OBJECT                         = COLUMN                                      
+  COLUMN_NUMBER                 = 19                                          
+  NAME                          = "COUNTER_17"                                
+  DESCRIPTION                   =                                             
+"State of counter 17 at the time of the snapshot."                            
+  DATA_TYPE                     = "ASCII_INTEGER"                             
+  START_BYTE                    = 172                                         
+  BYTES                         = 8                                           
+  MISSING_CONSTANT              = -99                                         
+  FORMAT                        = "I8"                                        
+ END_OBJECT                     = COLUMN                                      
+                                                                              
+ OBJECT                         = COLUMN                                      
+  COLUMN_NUMBER                 = 20                                          
+  NAME                          = "COUNTER_18"                                
+  DESCRIPTION                   =                                             
+"State of counter 18 at the time of the snapshot."                            
+  DATA_TYPE                     = "ASCII_INTEGER"                             
+  START_BYTE                    = 181                                         
+  BYTES                         = 8                                           
+  MISSING_CONSTANT              = -99                                         
+  FORMAT                        = "I8"                                        
+ END_OBJECT                     = COLUMN                                      
+                                                                              
+ OBJECT                         = COLUMN                                      
+  COLUMN_NUMBER                 = 21                                          
+  NAME                          = "COUNTER_19"                                
+  DESCRIPTION                   =                                             
+"State of counter 19 at the time of the snapshot."                            
+  DATA_TYPE                     = "ASCII_INTEGER"                             
+  START_BYTE                    = 190                                         
+  BYTES                         = 8                                           
+  MISSING_CONSTANT              = -99                                         
+  FORMAT                        = "I8"                                        
+ END_OBJECT                     = COLUMN                                      
+                                                                              
+END_OBJECT                      = TABLE                                       
+END                                                                           

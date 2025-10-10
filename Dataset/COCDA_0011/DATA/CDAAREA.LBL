@@ -1,0 +1,94 @@
+PDS_VERSION_ID                  = PDS3                                        
+                                                                              
+RECORD_TYPE                     = FIXED_LENGTH                                
+RECORD_BYTES                    = 26                                          
+FILE_RECORDS                    = 49                                          
+                                                                              
+^TABLE                          = "CDAAREA.TAB"                               
+                                                                              
+DATA_SET_NAME                   = "CASSINI CDA DATA V1.0"                     
+DATA_SET_ID                     = "CO-D-CDA-3/4/5-DUST-V1.0"                  
+PRODUCT_ID                      = "CDA-CAL-AREA"                              
+PRODUCT_NAME                    = "CASSINI CDA AREA TABLE"                    
+SPACECRAFT_NAME                 = "CASSINI ORBITER"                           
+INSTRUMENT_NAME                 = "COSMIC DUST ANALYSER"                      
+TARGET_NAME                     = "DUST"                                      
+START_TIME                      = "N/A"                                       
+STOP_TIME                       = "N/A"                                       
+PRODUCT_CREATION_TIME           = "2006-080T20:01:42"                         
+RECORD_FORMAT                   =                                             
+"(I2,3(1X,F6.4))"                                                             
+                                                                              
+OBJECT                          = TABLE                                       
+ INTERCHANGE_FORMAT             = ASCII                                       
+ ROWS                           = 49                                          
+ COLUMNS                        = 4                                           
+ ROW_BYTES                      = 26                                          
+ DESCRIPTION                    =                                             
+"The sensitive area of the CDA impact detector (IID - total area 0.0825       
+meter**2) and chemical analyser (CAT - total area 0.0073 meter**2) is         
+tabulated as a function of the incident angle with respect to the             
+instrument axis.  Area values are in meter**2, not normalized. They are       
+a numerical simulation of a stream of particles striking the detector at      
+different angles, taking shadowing into account. There are slight             
+variations with azimuthal angle that are not reflected in the table.          
+These are less than 10 percent variations, see SRAMAETAL2004B."               
+                                                                              
+ OBJECT                         = COLUMN                                      
+  COLUMN_NUMBER                 = 1                                           
+  NAME                          = "SENSOR_AXIS_ANGLE"                         
+  UNIT                          = "DEGREES"                                   
+  DESCRIPTION                   =                                             
+"This is the angle to the sensor axis where zero is along the axis"           
+  DATA_TYPE                     = "ASCII_INTEGER"                             
+  START_BYTE                    = 1                                           
+  BYTES                         = 2                                           
+  FORMAT                        = "I2"                                        
+ END_OBJECT                     = COLUMN                                      
+                                                                              
+ OBJECT                         = COLUMN                                      
+  COLUMN_NUMBER                 = 2                                           
+  NAME                          = "IMPACT_IONIZATION_DETECTOR_AREA"           
+  UNIT                          = "METER**2"                                  
+  DESCRIPTION                   =                                             
+"The exposed sensitive area of the outer CDA target (impact ionization        
+detector IID) corresponding to the projected area of the hemispherical        
+detector visible to an incoming particle traveling along a path at the        
+sensor axis angle."                                                           
+  DATA_TYPE                     = "ASCII_REAL"                                
+  START_BYTE                    = 4                                           
+  BYTES                         = 6                                           
+  FORMAT                        = "F6.4"                                      
+ END_OBJECT                     = COLUMN                                      
+                                                                              
+ OBJECT                         = COLUMN                                      
+  COLUMN_NUMBER                 = 3                                           
+  NAME                          = "CHEMICAL_ANALYSER_AREA"                    
+  UNIT                          = "METER**2"                                  
+  DESCRIPTION                   =                                             
+"The exposed sensitive area of the inner CDA Rhodium target (chemical         
+analyser target CAT) corresponding to the projected area of the               
+hemispherical detector visible to an incoming particle traveling along a      
+path at the sensor axis angle."                                               
+  DATA_TYPE                     = "ASCII_REAL"                                
+  START_BYTE                    = 11                                          
+  BYTES                         = 6                                           
+  FORMAT                        = "F6.4"                                      
+ END_OBJECT                     = COLUMN                                      
+                                                                              
+ OBJECT                         = COLUMN                                      
+  COLUMN_NUMBER                 = 4                                           
+  NAME                          = "TOTAL_AREA"                                
+  UNIT                          = "METER**2"                                  
+  DESCRIPTION                   =                                             
+"The total exposed sensitive area of the CDA corresponding to the             
+projected area of the hemispherical detector visible to an incoming           
+particle traveling along a path at the sensor axis angle."                    
+  DATA_TYPE                     = "ASCII_REAL"                                
+  START_BYTE                    = 18                                          
+  BYTES                         = 6                                           
+  FORMAT                        = "F6.4"                                      
+ END_OBJECT                     = COLUMN                                      
+                                                                              
+END_OBJECT                      = TABLE                                       
+END                                                                           

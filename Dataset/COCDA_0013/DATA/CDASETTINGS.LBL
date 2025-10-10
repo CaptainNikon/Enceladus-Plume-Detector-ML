@@ -1,0 +1,239 @@
+PDS_VERSION_ID                  = PDS3                                        
+                                                                              
+RECORD_TYPE                     = FIXED_LENGTH                                
+RECORD_BYTES                    = 84                                          
+FILE_RECORDS                    = 256                                         
+                                                                              
+^TABLE                          = "CDASETTINGS.TAB"                           
+                                                                              
+DATA_SET_NAME                   = "CASSINI CDA DATA V1.0"                     
+DATA_SET_ID                     = "CO-D-CDA-3/4/5-DUST-V1.0"                  
+PRODUCT_ID                      = "CDA_SETTINGS"                              
+PRODUCT_NAME                    = "CASSINI CDA SETTINGS TABLE"                
+SPACECRAFT_NAME                 = "CASSINI ORBITER"                           
+INSTRUMENT_NAME                 = "COSMIC DUST ANALYSER"                      
+TARGET_NAME                     = "DUST"                                      
+START_TIME                      = "N/A"                                       
+STOP_TIME                       = "N/A"                                       
+PRODUCT_CREATION_TIME           = "2006-06-27T20:10:12"                       
+RECORD_FORMAT                   =                                             
+"(I2,1X,E8.2,1X,I2,1X,E8.2,1X,I2,1X,E8.2,1X,I2,1X,E8.2,1X,I2,2(1X,I3),1X,I5,  
+1X,I1,1X,I4,1X,I3,1X,I4)"                                                     
+                                                                              
+OBJECT                          = TABLE                                       
+ INTERCHANGE_FORMAT             = ASCII                                       
+ ROWS                           = 256                                         
+ COLUMNS                        = 16                                          
+ ROW_BYTES                      = 84                                          
+ DESCRIPTION                    =                                             
+"Table of voltages corresponding to voltage level codes and coulomb           
+threshold settings. Refer to SRAMAETAL2004B for a detailed description        
+of the CDA settings."                                                         
+                                                                              
+ OBJECT                         = COLUMN                                      
+  COLUMN_NUMBER                 = 1                                           
+  NAME                          = "QC_THRESHOLD_SETTING"                      
+  DESCRIPTION                   =                                             
+"Code corresponding to the threshold setting for the amplifier connected      
+to the chemical analyser target. Values are between 0 and 15."                
+  DATA_TYPE                     = "ASCII_INTEGER"                             
+  START_BYTE                    = 1                                           
+  BYTES                         = 2                                           
+  MISSING_CONSTANT              = 99                                          
+  FORMAT                        = "I2"                                        
+ END_OBJECT                     = COLUMN                                      
+                                                                              
+ OBJECT                         = COLUMN                                      
+  COLUMN_NUMBER                 = 2                                           
+  NAME                          = "QC_THRESHOLD_SETTING_COULOMB"              
+  UNIT                          = "COULOMBS"                                  
+  DESCRIPTION                   =                                             
+"Value in Coulomb corresponding to the code value."                           
+  DATA_TYPE                     = "ASCII_REAL"                                
+  START_BYTE                    = 4                                           
+  BYTES                         = 8                                           
+  MISSING_CONSTANT              = 9.99E-99                                    
+  FORMAT                        = "E8.2"                                      
+ END_OBJECT                     = COLUMN                                      
+                                                                              
+ OBJECT                         = COLUMN                                      
+  COLUMN_NUMBER                 = 3                                           
+  NAME                          = "QA_THRESHOLD_SETTING"                      
+  DESCRIPTION                   =                                             
+"Code corresponding to the threshold setting for the amplifier connected      
+to the chemical analyser grid. Values are between 0 and 15."                  
+  DATA_TYPE                     = "ASCII_INTEGER"                             
+  START_BYTE                    = 13                                          
+  BYTES                         = 2                                           
+  MISSING_CONSTANT              = 99                                          
+  FORMAT                        = "I2"                                        
+ END_OBJECT                     = COLUMN                                      
+                                                                              
+ OBJECT                         = COLUMN                                      
+  COLUMN_NUMBER                 = 4                                           
+  NAME                          = "QA_THRESHOLD_SETTING_COULOMB"              
+  UNIT                          = "COULOMBS"                                  
+  DESCRIPTION                   =                                             
+"Value in Coulomb corresponding to the code value."                           
+  DATA_TYPE                     = "ASCII_REAL"                                
+  START_BYTE                    = 16                                          
+  BYTES                         = 8                                           
+  MISSING_CONSTANT              = 9.99E-99                                    
+  FORMAT                        = "E8.2"                                      
+ END_OBJECT                     = COLUMN                                      
+                                                                              
+ OBJECT                         = COLUMN                                      
+  COLUMN_NUMBER                 = 5                                           
+  NAME                          = "QT_THRESHOLD_SETTING"                      
+  DESCRIPTION                   =                                             
+"Code corresponding to the threshold setting for the amplifier connected      
+to the impact ionisation target. Values are between 0 and 15."                
+  DATA_TYPE                     = "ASCII_INTEGER"                             
+  START_BYTE                    = 25                                          
+  BYTES                         = 2                                           
+  MISSING_CONSTANT              = 99                                          
+  FORMAT                        = "I2"                                        
+ END_OBJECT                     = COLUMN                                      
+                                                                              
+ OBJECT                         = COLUMN                                      
+  COLUMN_NUMBER                 = 6                                           
+  NAME                          = "QT_THRESHOLD_SETTING_COULOMB"              
+  UNIT                          = "COULOMBS"                                  
+  DESCRIPTION                   =                                             
+"Value in Coulomb corresponding to the code value."                           
+  DATA_TYPE                     = "ASCII_REAL"                                
+  START_BYTE                    = 28                                          
+  BYTES                         = 8                                           
+  MISSING_CONSTANT              = 9.99E-99                                    
+  FORMAT                        = "E8.2"                                      
+ END_OBJECT                     = COLUMN                                      
+                                                                              
+ OBJECT                         = COLUMN                                      
+  COLUMN_NUMBER                 = 7                                           
+  NAME                          = "QI_THRESHOLD_SETTING"                      
+  DESCRIPTION                   =                                             
+"Code corresponding to the threshold setting for the amplifier connected      
+to the ion grid. Values are between 0 and 15."                                
+  DATA_TYPE                     = "ASCII_INTEGER"                             
+  START_BYTE                    = 37                                          
+  BYTES                         = 2                                           
+  MISSING_CONSTANT              = 99                                          
+  FORMAT                        = "I2"                                        
+ END_OBJECT                     = COLUMN                                      
+                                                                              
+ OBJECT                         = COLUMN                                      
+  COLUMN_NUMBER                 = 8                                           
+  NAME                          = "QI_THRESHOLD_SETTING_COULOMB"              
+  UNIT                          = "COULOMBS"                                  
+  DESCRIPTION                   =                                             
+"Value in Coulomb corresponding to the code value."                           
+  DATA_TYPE                     = "ASCII_REAL"                                
+  START_BYTE                    = 40                                          
+  BYTES                         = 8                                           
+  MISSING_CONSTANT              = 9.99E-99                                    
+  FORMAT                        = "E8.2"                                      
+ END_OBJECT                     = COLUMN                                      
+                                                                              
+ OBJECT                         = COLUMN                                      
+  COLUMN_NUMBER                 = 9                                           
+  NAME                          = "QMA_THRESHOLD_SETTING"                     
+  DESCRIPTION                   =                                             
+"Code corresponding to the threshold setting for the amplifier connected      
+to the multiplier anode. Values are between 0 and 15."                        
+  DATA_TYPE                     = "ASCII_INTEGER"                             
+  START_BYTE                    = 49                                          
+  BYTES                         = 2                                           
+  MISSING_CONSTANT              = 99                                          
+  FORMAT                        = "I2"                                        
+ END_OBJECT                     = COLUMN                                      
+                                                                              
+ OBJECT                         = COLUMN                                      
+  COLUMN_NUMBER                 = 10                                          
+  NAME                          = "QMA_THRESHOLD_VOLTAGE"                     
+  UNIT                          = "MILLIVOLT"                                 
+  DESCRIPTION                   =                                             
+"Value in Millivolt corresponding to the code value."                         
+  DATA_TYPE                     = "ASCII_INTEGER"                             
+  START_BYTE                    = 52                                          
+  BYTES                         = 3                                           
+  MISSING_CONSTANT              = -99                                         
+  FORMAT                        = "I3"                                        
+ END_OBJECT                     = COLUMN                                      
+                                                                              
+ OBJECT                         = COLUMN                                      
+  COLUMN_NUMBER                 = 11                                          
+  NAME                          = "MULTIPLIER_VOLTAGE_LEVEL"                  
+  DESCRIPTION                   =                                             
+"The multiplier high voltage setting, in steps between 0 and 255."            
+  DATA_TYPE                     = "ASCII_INTEGER"                             
+  START_BYTE                    = 56                                          
+  BYTES                         = 3                                           
+  MISSING_CONSTANT              = 999                                         
+  FORMAT                        = "I3"                                        
+ END_OBJECT                     = COLUMN                                      
+                                                                              
+ OBJECT                         = COLUMN                                      
+  COLUMN_NUMBER                 = 12                                          
+  NAME                          = "MULTIPLIER_VOLTAGE"                        
+  UNIT                          = "VOLT"                                      
+  DESCRIPTION                   =                                             
+"Multiplier high voltage setting values."                                     
+  DATA_TYPE                     = "ASCII_INTEGER"                             
+  START_BYTE                    = 60                                          
+  BYTES                         = 5                                           
+  MISSING_CONSTANT              = -9999                                       
+  FORMAT                        = "I5"                                        
+ END_OBJECT                     = COLUMN                                      
+                                                                              
+ OBJECT                         = COLUMN                                      
+  COLUMN_NUMBER                 = 13                                          
+  NAME                          = "ION_GRID_VOLTAGE_LEVEL"                    
+  DESCRIPTION                   =                                             
+"The ion grid high voltage setting in steps between 0 and 3."                 
+  DATA_TYPE                     = "ASCII_INTEGER"                             
+  START_BYTE                    = 66                                          
+  BYTES                         = 1                                           
+  MISSING_CONSTANT              = 9                                           
+  FORMAT                        = "I1"                                        
+ END_OBJECT                     = COLUMN                                      
+                                                                              
+ OBJECT                         = COLUMN                                      
+  COLUMN_NUMBER                 = 14                                          
+  NAME                          = "ION_GRID_VOLTAGE"                          
+  UNIT                          = "VOLT"                                      
+  DESCRIPTION                   =                                             
+"Ion grid voltage setting value."                                             
+  DATA_TYPE                     = "ASCII_INTEGER"                             
+  START_BYTE                    = 68                                          
+  BYTES                         = 4                                           
+  MISSING_CONSTANT              = -999                                        
+  FORMAT                        = "I4"                                        
+ END_OBJECT                     = COLUMN                                      
+                                                                              
+ OBJECT                         = COLUMN                                      
+  COLUMN_NUMBER                 = 15                                          
+  NAME                          = "CHEMICAL_ANALYSER_VOLTAGE_LEVEL"           
+  DESCRIPTION                   =                                             
+"The chemical analyser high voltage setting in steps between 0 and 255."      
+  DATA_TYPE                     = "ASCII_INTEGER"                             
+  START_BYTE                    = 73                                          
+  BYTES                         = 3                                           
+  MISSING_CONSTANT              = 999                                         
+  FORMAT                        = "I3"                                        
+ END_OBJECT                     = COLUMN                                      
+                                                                              
+ OBJECT                         = COLUMN                                      
+  COLUMN_NUMBER                 = 16                                          
+  NAME                          = "CHEMICAL_ANALYSER_VOLTAGE"                 
+  UNIT                          = "VOLT"                                      
+  DESCRIPTION                   =                                             
+"Chemical analyser voltage setting value."                                    
+  DATA_TYPE                     = "ASCII_INTEGER"                             
+  START_BYTE                    = 77                                          
+  BYTES                         = 4                                           
+  MISSING_CONSTANT              = -999                                        
+  FORMAT                        = "I4"                                        
+ END_OBJECT                     = COLUMN                                      
+                                                                              
+END_OBJECT                      = TABLE                                       
+END                                                                           

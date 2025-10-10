@@ -1,0 +1,57 @@
+PDS_VERSION_ID                  = PDS3                                        
+                                                                              
+RECORD_TYPE                     = FIXED_LENGTH                                
+RECORD_BYTES                    = 19                                          
+FILE_RECORDS                    = 508                                         
+                                                                              
+^TABLE                          = "MP_00237431.TAB"                           
+                                                                              
+DATA_SET_NAME                   = "CASSINI CDA DATA V1.0"                     
+DATA_SET_ID                     = "CO-D-CDA-3/4/5-DUST-V1.0"                  
+PRODUCT_ID                      = "MP-00237431"                               
+PRODUCT_NAME                    = "CDA MP SIGNAL TABLE"                       
+SPACECRAFT_NAME                 = "CASSINI ORBITER"                           
+INSTRUMENT_NAME                 = "COSMIC DUST ANALYSER"                      
+TARGET_NAME                     = "DUST"                                      
+START_TIME                      = "2005-105T01:51:16"                         
+STOP_TIME                       = "2005-105T01:51:16"                         
+PRODUCT_CREATION_TIME           = "2006-089T02:54:39"                         
+RECORD_FORMAT                   =                                             
+"(F6.2,1X,F9.2)"                                                              
+                                                                              
+OBJECT                          = TABLE                                       
+ INTERCHANGE_FORMAT             = ASCII                                       
+ ROWS                           = 508                                         
+ COLUMNS                        = 2                                           
+ ROW_BYTES                      = 19                                          
+ DESCRIPTION                    =                                             
+"Signal value at the ion multiplier"                                          
+                                                                              
+ OBJECT                         = COLUMN                                      
+  COLUMN_NUMBER                 = 1                                           
+  NAME                          = "OFFSET_TIME"                               
+  UNIT                          = "MICROSECONDS"                              
+  DESCRIPTION                   =                                             
+"Flight time measured from estimated time of impact."                         
+  DATA_TYPE                     = "ASCII_REAL"                                
+  START_BYTE                    = 1                                           
+  BYTES                         = 6                                           
+  MISSING_CONSTANT              = 999                                         
+  FORMAT                        = "F6.2"                                      
+ END_OBJECT                     = COLUMN                                      
+                                                                              
+ OBJECT                         = COLUMN                                      
+  COLUMN_NUMBER                 = 2                                           
+  NAME                          = "AMPLITUDE"                                 
+  UNIT                          = "MICROVOLTS"                                
+  DESCRIPTION                   =                                             
+"Signal value provided by the multiplier channel."                            
+  DATA_TYPE                     = "ASCII_REAL"                                
+  START_BYTE                    = 8                                           
+  BYTES                         = 9                                           
+  MISSING_CONSTANT              = -99999.99                                   
+  FORMAT                        = "F9.2"                                      
+ END_OBJECT                     = COLUMN                                      
+                                                                              
+END_OBJECT                      = TABLE                                       
+END                                                                           
