@@ -11,7 +11,7 @@ The CDA data used in this project are publicly available from NASA’s
 Specifically, the Cassini CDA calibrated and event data sets were obtained from:
 
 > NASA Planetary Data System (PDS), Cassini Cosmic Dust Analyzer (CDA)  
-> [[[https://pds-atmospheres.nmsu.edu/data_and_services/atmospheres_data/Cassini_PDS3/cda.html](https://sbn.psi.edu/pds/resource/cocda.html)](https://sbn.psi.edu/pds/resource/cocda.html)]([https://pds-atmospheres.nmsu.edu/data_and_services/atmospheres_data/Cassini_PDS3/cda.html](https://sbn.psi.edu/pds/resource/cocda.html))
+> [[[https://pds-atmospheres.nmsu.edu/data_and_services/atmospheres_data/Cassini_PDS3/cda.html](https://sbn.psi.edu/pds/resource/cocda.html)]
 
 If you use this repository or derived data in your work, please cite the
 original CDA instrument paper and acknowledge the NASA PDS:
