@@ -10,14 +10,14 @@ The CDA data used in this project are publicly available from NASA’s
 Specifically, the Cassini CDA data sets were obtained from:
 
 > NASA Planetary Data System (PDS), Cassini Cosmic Dust Analyzer (CDA)  
-> [[[https://pds-atmospheres.nmsu.edu/data_and_services/atmospheres_data/Cassini_PDS3/cda.html](https://sbn.psi.edu/pds/resource/cocda.html)]
+> [https://pds-atmospheres.nmsu.edu/data_and_services/atmospheres_data/Cassini_PDS3/cda.html](https://sbn.psi.edu/pds/resource/cocda.html)
 
 If you use this repository or derived data in your work, please cite the
 original CDA instrument paper and acknowledge the NASA PDS:
 
-- Srama, R., Ahrens, T. J., Altobelli, N., *et al.* (2004).  
-  *The Cassini Cosmic Dust Analyzer.* **Space Science Reviews**, 114(1–4), 465–518.  
-  [[https://doi.org/10.1023/B:SPAC.0000046755.70579.e6](https://doi.org/10.1023/B:SPAC.0000046755.70579.e6)]
+> Srama, R., Ahrens, T. J., Altobelli, N., *et al.* (2004).  
+> *The Cassini Cosmic Dust Analyzer.* **Space Science Reviews**, 114(1–4), 465–518.  
+> [https://doi.org/10.1023/B:SPAC.0000046755.70579.e6](https://doi.org/10.1023/B:SPAC.0000046755.70579.e6)
 
 ## Acknowledgment
 
