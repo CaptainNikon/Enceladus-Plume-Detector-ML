@@ -10,7 +10,6 @@
 # ===================================================
 
 import matplotlib
-import matplotlib.pyplot as plt
 import matplotlib.cm as cm
 from cycler import cycler
 
